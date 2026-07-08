@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamo Viajar - Tours no Chile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Playfair+Display:wght@700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="">
+
+<!-- ===== HEADER ===== -->
+<header id="header" class="scrolled">
+    <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Vamo Viajar" class="logo-img">
+    </a>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#tours">Destinos</a>
+        <a href="#tours">Santiago</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cambio">Contato</a>
+        <a href="https://wa.me/message/P2THDXHXEB5WH1" class="btn-reservar-nav" target="_blank">Reservar Agora</a>
+    </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <h1>Sua próxima <span>aventura</span><br>começa aqui</h1>
+        <p>Experiências únicas de viagens para destinos extraordinários.<br>Deixe-nos transformar seus sonhos em realidade.</p>
+        <a href="#tours" class="btn-hero">Ver Todos os Tours</a>
+    </div>
+</section>
+
+<!-- ===== TOURS ===== -->
+<section class="tours-section" id="tours">
+    <h2 class="section-title">Nossos <span>Tours</span></h2>
+    <p class="section-subtitle">Clique em "Ver Detalhes" para saber tudo sobre cada passeio</p>
+
+    <div class="tours-grid">
+
+        <!-- CARD 1 -->
+        <div class="tour-card" data-tour-id="farellones">
+            <img class="card-foto" alt="Farellones" src="assets/img002.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Farellones</h3>
+                <p class="card-subtitulo">A diversão é garantida para toda a família!</p>
+                <div class="card-categoria">😊 Aventura</div>
+                <p class="card-preco">R$ 255,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('farellones')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Farellones!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 - DESTAQUE -->
+        <div class="tour-card destaque" data-tour-id="vallenevado">
+            <img class="card-foto" src="assets/img003.jpg" alt="Esquiador em Valle Nevado">
+            <div class="card-body">
+                <h3 class="card-titulo">Valle Nevado</h3>
+                <p class="card-subtitulo">A melhor opção para conhecer e curtir a Cordilheira dos Andes</p>
+                <div class="card-categoria">😊 Aventura</div>
+                <p class="card-preco">R$ 255,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('vallenevado')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Valle Nevado!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="tour-card" data-tour-id="panoramico">
+            <img class="card-foto" alt="Andes Panorâmico" src="assets/img004.webp">
+            <div class="card-body">
+                <h3 class="card-titulo">Andes Panorâmico</h3>
+                <p class="card-subtitulo">Vislumbre a Cordilheira dos Andes</p>
+                <div class="card-categoria">😊 Premium</div>
+                <p class="card-preco">R$ 240,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('panoramico')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Panorámico!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="tour-card" data-tour-id="sunset">
+            <img class="card-foto" alt="Valle Nevado Sunset" src="assets/img005.png">
+            <div class="card-body">
+                <h3 class="card-titulo">Valle Nevado Sunset</h3>
+                <p class="card-subtitulo">Desfrute de um pôr do sol inesquecível no Valle Nevado</p>
+                <div class="card-categoria">😊 Premium</div>
+                <p class="card-preco">R$ 300,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('sunset')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Valle Nevado Sunset!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="tour-card" data-tour-id="elcolorado">
+            <img class="card-foto" alt="El Colorado Full Day" src="assets/img006.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">El Colorado Full Day</h3>
+                <p class="card-subtitulo">Venha viver a magia na neve</p>
+                <div class="card-categoria">😊 Aventura</div>
+                <p class="card-preco">R$ 250,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('elcolorado')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour El Colorado!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="tour-card" data-tour-id="citycaminando">
+            <img class="card-foto" alt="City Tour Caminando" src="assets/img007.png">
+            <div class="card-body">
+                <h3 class="card-titulo">City Tour Caminando</h3>
+                <p class="card-subtitulo">Santiago histórica a pé com guia em português</p>
+                <div class="card-categoria">😊 Cultura</div>
+                <p class="card-preco">R$ 150,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('citycaminando')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o City Tour Caminando!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="tour-card" data-tour-id="cityvan">
+            <img class="card-foto" alt="City Tour em Van" src="assets/img008.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">City Tour en Van</h3>
+                <p class="card-subtitulo">Explore Santiago com conforto em van particular</p>
+                <div class="card-categoria">😊 Cultura</div>
+                <p class="card-preco">R$ 200,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('cityvan')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o City Tour en Van!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="tour-card" data-tour-id="cityfunicular">
+            <img class="card-foto" alt="City Tour + Funicular" src="assets/img009.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">City Tour + Funicular</h3>
+                <p class="card-subtitulo">City tour premium com tickets incluídos</p>
+                <div class="card-categoria">😊 Cultura</div>
+                <p class="card-preco">R$ 380,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('cityfunicular')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o City Tour Funicular!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="tour-card" data-tour-id="conchatoro">
+            <img class="card-foto" alt="Concha y Toro — Centro del Vino" src="assets/img010.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Concha y Toro — Centro del Vino</h3>
+                <p class="card-subtitulo">Vinícola centenária fundada por Melchor Concha y Toro</p>
+                <div class="card-categoria">😊 Gastronomia</div>
+                <p class="card-preco">R$ 415,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('conchatoro')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Concha y Toro!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 10 -->
+        <div class="tour-card" data-tour-id="conchatoropropremium">
+            <img class="card-foto" alt="Concha y Toro Premium" src="assets/img011.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Concha y Toro Premium</h3>
+                <p class="card-subtitulo">Vinícola lendária e premiada</p>
+                <div class="card-categoria">😊 Premium</div>
+                <p class="card-preco">R$ 385,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('conchatoropropremium')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Concha y Toro Premium!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 11 -->
+        <div class="tour-card" data-tour-id="conchamarques">
+            <img class="card-foto" alt="Concha y Toro Marqués" src="assets/img012.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Concha y Toro Marqués</h3>
+                <p class="card-subtitulo">Tour exclusivo na Concha y Toro</p>
+                <div class="card-categoria">😊 Premium</div>
+                <p class="card-preco">R$ 490,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('conchamarques')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Concha y Toro Marqués!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 12 -->
+        <div class="tour-card" data-tour-id="undurraga">
+            <img class="card-foto" alt="Vinícola Undurraga" src="assets/img013.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Vinícola Undurraga</h3>
+                <p class="card-subtitulo">Conheça essa incrível vinícola centenária</p>
+                <div class="card-categoria">😊 Gastronomia</div>
+                <p class="card-preco">R$ 320,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('undurraga')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Undurraga!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 13 -->
+        <div class="tour-card" data-tour-id="elyeso">
+            <img class="card-foto" alt="Embalse El Yeso" src="assets/img014.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Embalse El Yeso</h3>
+                <p class="card-subtitulo">Lago azul turquesa em meio aos Andes</p>
+                <div class="card-categoria">😊 Natureza</div>
+                <p class="card-preco">R$ 315,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('elyeso')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Embalse El Yeso!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 14 -->
+        <div class="tour-card" data-tour-id="termas">
+            <img class="card-foto" alt="Termas de Colina" src="assets/img015.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Termas de Colina</h3>
+                <p class="card-subtitulo">Fontes termais naturais perto de Santiago</p>
+                <div class="card-categoria">😊 Relaxamento</div>
+                <p class="card-preco">R$ 430,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('termas')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre as Termas de Colina!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 15 -->
+        <div class="tour-card" data-tour-id="embalse_termas">
+            <img class="card-foto" alt="Cajón del Maipo + Termas de Colina" src="assets/img016.webp">
+            <div class="card-body">
+                <h3 class="card-titulo">Cajón del Maipo + Termas de Colina</h3>
+                <p class="card-subtitulo">Paisagens incríveis, ar puro e relaxamento nas termas</p>
+                <div class="card-categoria">😊 Natureza</div>
+                <p class="card-preco">R$ 410,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('embalse_termas')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre Embalse + Termas!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 16 -->
+        <div class="tour-card" data-tour-id="islanegra">
+            <img class="card-foto" alt="Isla Negra + Undurraga + San Alfonso" src="assets/img017.webp">
+            <div class="card-body">
+                <h3 class="card-titulo">Isla Negra + Undurraga + San Alfonso</h3>
+                <p class="card-subtitulo">Oceano Pacífico, a maior piscina do mundo e vinícola Undurraga</p>
+                <div class="card-categoria">😊 Cultura</div>
+                <p class="card-preco">R$ 420,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('islanegra')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre Isla Negra + Undurraga!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 17 -->
+        <div class="tour-card" data-tour-id="vina">
+            <img class="card-foto" alt="Viña del Mar e Valparaíso" src="assets/img018.avif">
+            <div class="card-body">
+                <h3 class="card-titulo">Viña del Mar y Valparaíso</h3>
+                <p class="card-subtitulo">As duas cidades mais charmosas do litoral chileno</p>
+                <div class="card-categoria">😊 Cultura</div>
+                <p class="card-preco">R$ 240,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('vina')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre Viña del Mar y Valparaíso!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 18 -->
+        <div class="tour-card" data-tour-id="portillo">
+            <img class="card-foto" alt="Portillo" src="assets/img019.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Portillo</h3>
+                <p class="card-subtitulo">O resort mais tradicional do Chile, na fronteira com Argentina</p>
+                <div class="card-categoria">😊 Aventura</div>
+                <p class="card-preco">R$ 310,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('portillo')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o tour Portillo!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 19 -->
+        <div class="tour-card" data-tour-id="safari">
+            <img class="card-foto" alt="Parque Safari" src="assets/img020.webp">
+            <div class="card-body">
+                <h3 class="card-titulo">Parque Safari</h3>
+                <p class="card-subtitulo">Aventura selvagem com animais exóticos perto de Santiago</p>
+                <div class="card-categoria">😊 Aventura</div>
+                <p class="card-preco">R$ 385,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('safari')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Parque Safari!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 20 -->
+        <div class="tour-card" data-tour-id="alyan">
+            <img class="card-foto" alt="Alyan Sunset" src="assets/img021.jpg">
+            <div class="card-body">
+                <h3 class="card-titulo">Alyan Sunset</h3>
+                <p class="card-subtitulo">Pôr do sol com vista para a vinícola e a Cordilheira dos Andes</p>
+                <div class="card-categoria">😊 Premium</div>
+                <p class="card-preco">R$ 220,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('alyan')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Alyan Sunset!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 21 -->
+        <div class="tour-card destaque" data-tour-id="monteluz">
+            <img class="card-foto" alt="Vinícola Monteluz Sunset" src="assets/img022.webp">
+            <div class="card-body">
+                <h3 class="card-titulo">Vinícola Monteluz Sunset</h3>
+                <p class="card-subtitulo">Sunset entre vinhedos com música e boa vibe</p>
+                <div class="card-categoria">😊 Festa</div>
+                <p class="card-preco">R$ 530,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('monteluz')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre a Vinícola Monteluz Sunset!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 22 -->
+        <div class="tour-card" data-tour-id="sunsetinfinitum">
+            <img class="card-foto" alt="Sunset Infinitum 3K" src="assets/img023.jpg">
+            <div class="card-body">
+                <span class="card-badge-oferta">Oferta de lançamento — Julho</span>
+                <h3 class="card-titulo">Sunset Infinitum 3K</h3>
+                <p class="card-subtitulo">Festa exclusiva com DJ no Valle Nevado</p>
+                <div class="card-categoria">😊 Festa</div>
+                <p class="card-preco">R$ 580,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('sunsetinfinitum')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre o Sunset Infinitum 3K!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 23 -->
+        <div class="tour-card" data-tour-id="pubcrawl">
+            <img class="card-foto" alt="Festa Pub Crawl" src="assets/img024.png">
+            <div class="card-body">
+                <h3 class="card-titulo">Festa Pub Crawl</h3>
+                <p class="card-subtitulo">O passeio mais divertido de bares e casas noturnas de Santiago</p>
+                <div class="card-categoria">😊 Festa</div>
+                <p class="card-preco">R$ 120,00</p>
+                <div class="card-buttons">
+                    <button class="btn-ver-detalhes" onclick="abrirModal('pubcrawl')">Ver Detalhes</button>
+                    <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Quero saber mais sobre a Festa Pub Crawl!" class="btn-reservar" target="_blank">Reservar Tour</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" onclick="fecharModalFora(event)">
+    <div class="modal" id="modal">
+        <button class="modal-close" onclick="fecharModal()">✕</button>
+        <img class="modal-foto" id="modalFoto" src="assets/img003.jpg" alt="Valle Nevado" style="display: block;">
+        <div class="modal-foto-placeholder" id="modalImg" style="display: none;">🏔️</div>
+        <div class="modal-video-wrap" id="modalVideoWrap" style="display:none;">
+            <video id="modalVideo" autoplay="" muted="" loop="" playsinline=""></video>
+            <button class="modal-video-unmute" onclick="ativarSomVideo()">🔊 Ativar som</button>
+        </div>
+        <div class="modal-body">
+            <h2 class="modal-titulo" id="modalTitulo">Valle Nevado</h2>
+            <p class="modal-desc" id="modalDesc">A melhor opção para conhecer e curtir a Cordilheira dos Andes. Explore a Cordilheira em um tour emocionante pelo Valle Nevado, com vistas deslumbrantes e paradas estratégicas ideais para fotos inesquecíveis.</p>
+            <div class="modal-includes">
+                <h3>✅ O que está incluso:</h3>
+                <ul id="modalLista"><li>Saída às 06:00h rumo a Valle Nevado</li><li>Transporte de ida e volta de Santiago</li><li>Guia em português</li><li>Parada para café da manhã</li><li>Parada em rental para aluguel de roupa de neve e equipamentos</li></ul>
+            </div>
+            <div class="modal-naoincluso" id="modalNaoInclusoBlock" style="display: block;">
+                <h3>❌ Não incluso:</h3>
+                <ul id="modalListaNaoIncluso"><li>Alimentação</li><li>Aluguel de roupas de neve/equipamentos</li><li>Tickets de acesso ao centro de ski</li></ul>
+            </div>
+            <p class="modal-nota" id="modalNota" style="display: block;">💬 Kit de neve (luvas, óculos, macacão e botas) à parte, no rental: aprox. R$ 148 (adulto) / R$ 205 (infantil).</p>
+            <p class="modal-preco-label">A partir de</p>
+            <p class="modal-preco" id="modalPreco">R$ 255,00 por pessoa</p>
+            <a href="https://wa.me/message/P2THDXHXEB5WH1?text=Olá! Tenho interesse no tour: Valle Nevado" class="modal-btn-wpp" id="modalWpp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Reservar pelo WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CÂMBIO ===== -->
+<section class="cambio-section" id="cambio">
+    <div class="cambio-container">
+        <h2 class="section-title">💱 Câmbio do <span>Dia</span></h2>
+        <p class="section-subtitle" style="margin-bottom:40px">Converta seus Reais em Pesos Chilenos com a cotação atualizada!</p>
+
+        <div class="calculadora">
+            <h3 class="calc-title">Calculadora de Câmbio</h3>
+            <div class="calc-row">
+                <div class="calc-input-group">
+                    <span class="bandeira">🇧🇷</span>
+                    <label>Reais (BRL)</label>
+                    <input type="number" id="inputBRL" placeholder="500" oninput="converter('BRL')" value="500">
+                </div>
+                <div class="calc-arrow">⇄</div>
+                <div class="calc-input-group">
+                    <span class="bandeira">🇨🇱</span>
+                    <label>Pesos Chilenos (CLP)</label>
+                    <input type="number" id="inputCLP" placeholder="0" oninput="converter('CLP')">
+                </div>
+            </div>
+            <p class="taxa-dia" id="taxaInfo">📅 Cotação de hoje (07/07/2026): <span>1 BRL = 171.00 CLP</span></p>
+        </div>
+
+        <div class="endereco-cambio">
+            <div class="endereco-icon">🏦</div>
+            <div class="endereco-info">
+                <h3>Casa de Câmbio Indicada</h3>
+                <p><strong>Inversiones Suiza</strong></p>
+                <p>📍 Agustinas 1036 — Santiago, Chile</p>
+                <p>💬 Casa de câmbio de confiança, indicada pessoalmente para nossos clientes!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SOBRE MIM ===== -->
+<section class="sobre-section" id="sobre">
+    <div class="sobre-container">
+        <div class="sobre-texto-col">
+            <span class="sobre-badge">Por que nos escolher</span>
+            <h2 class="sobre-titulo">Viagens <span>Personalizadas</span><br>Para Você</h2>
+            <p class="sobre-texto">Com 8 anos de experiência, transformamos sonhos em realidade. Nossa equipe de especialistas cuida de cada detalhe para que você aproveite cada momento da sua viagem.</p>
+
+            <div class="sobre-features">
+                <div class="sobre-feature">
+                    <div class="sobre-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="sobre-feature-texto">
+                        <h4>Segurança Garantida</h4>
+                        <p>Viaje com tranquilidade. Oferecemos seguro viagem completo em todos os pacotes.</p>
+                    </div>
+                </div>
+                <div class="sobre-feature">
+                    <div class="sobre-feature-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <div class="sobre-feature-texto">
+                        <h4>Melhor Preço</h4>
+                        <p>Garantia do menor preço. Se encontrar mais barato, cobrimos a diferença.</p>
+                    </div>
+                </div>
+                <div class="sobre-feature">
+                    <div class="sobre-feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="sobre-feature-texto">
+                        <h4>Suporte 24/7</h4>
+                        <p>Assistência completa antes, durante e depois da sua viagem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sobre-stats-wrap">
+            <div class="sobre-stats-badge">
+                <span class="num">10+</span>
+                <span class="label">Anos</span>
+            </div>
+            <div class="sobre-stats-grid">
+                <div class="sobre-stat-card">
+                    <div class="num">100%</div>
+                    <div class="label">Satisfação</div>
+                </div>
+                <div class="sobre-stat-card">
+                    <div class="num">50+</div>
+                    <div class="label">Países</div>
+                </div>
+                <div class="sobre-stat-card">
+                    <div class="num">24/7</div>
+                    <div class="label">Suporte</div>
+                </div>
+                <div class="sobre-stat-card">
+                    <div class="num">5★</div>
+                    <div class="label">Avaliação</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NOSSOS CLIENTES ===== -->
+<section class="clientes-section" id="clientes">
+    <h2 class="section-title">Nossos <span>Clientes</span></h2>
+    <p class="section-subtitle">Fotos e prints de recomendação de quem já viajou com a gente</p>
+    <div class="clientes-grid" id="clientesGrid"><div class="cliente-slot tem-foto" data-index="1">
+            <img class="cliente-foto" src="assets/img025.jpg" alt="Foto de cliente 1">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(1)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="2">
+            <img class="cliente-foto" src="assets/img026.jpg" alt="Foto de cliente 2">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(2)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="3">
+            <img class="cliente-foto" src="assets/img027.jpg" alt="Foto de cliente 3">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(3)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="4">
+            <img class="cliente-foto" src="assets/img028.jpg" alt="Foto de cliente 4">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(4)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="5">
+            <img class="cliente-foto" src="assets/img029.jpg" alt="Foto de cliente 5">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(5)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="6">
+            <img class="cliente-foto" src="assets/img030.jpg" alt="Foto de cliente 6">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(6)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="7">
+            <img class="cliente-foto" src="assets/img031.jpg" alt="Foto de cliente 7">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(7)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="8">
+            <img class="cliente-foto" src="assets/img032.jpg" alt="Foto de cliente 8">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(8)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="9">
+            <img class="cliente-foto" src="assets/img033.jpg" alt="Foto de cliente 9">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(9)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="10">
+            <img class="cliente-foto" src="assets/img034.jpg" alt="Foto de cliente 10">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(10)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="11">
+            <img class="cliente-foto" src="assets/img035.jpg" alt="Foto de cliente 11">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(11)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="12">
+            <img class="cliente-foto" src="assets/img036.jpg" alt="Foto de cliente 12">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(12)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="13">
+            <img class="cliente-foto" src="assets/img037.jpg" alt="Foto de cliente 13">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(13)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="14">
+            <img class="cliente-foto" src="assets/img038.jpg" alt="Foto de cliente 14">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(14)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="15">
+            <img class="cliente-foto" src="assets/img039.jpg" alt="Foto de cliente 15">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(15)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="16">
+            <img class="cliente-foto" src="assets/img040.jpg" alt="Foto de cliente 16">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(16)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="17">
+            <img class="cliente-foto" src="assets/img041.jpg" alt="Foto de cliente 17">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(17)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="18">
+            <img class="cliente-foto" src="assets/img042.jpg" alt="Foto de cliente 18">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(18)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="19">
+            <img class="cliente-foto" src="assets/img029.jpg" alt="Foto de cliente 19">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(19)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div><div class="cliente-slot tem-foto" data-index="20">
+            <img class="cliente-foto" src="assets/img043.jpg" alt="Foto de cliente 20">
+            <div class="cliente-slot-overlay">
+                <button class="cliente-slot-btn" title="Ampliar" onclick="event.stopPropagation(); abrirLightbox(20)"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div></div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq">
+    <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+    <p class="section-subtitle">Tire suas dúvidas antes de reservar seu tour</p>
+    <div class="faq-lista">
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                <span>Como reservar um tour?</span>
+                <span class="faq-seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-resposta-wrap">
+                <div class="faq-resposta">Entre em contato pelo nosso WhatsApp e você terá todas as informações de reserva com nossos atendentes.</div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                <span>Como funciona o pagamento?</span>
+                <span class="faq-seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-resposta-wrap">
+                <div class="faq-resposta">O pagamento pode ser feito no Pix ou cartão de crédito.</div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                <span>Em caso de nevasca, o que acontece?</span>
+                <span class="faq-seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-resposta-wrap" style="">
+                <div class="faq-resposta">Para tours com mudanças de clima, podemos trocar o seu tour para um outro dia.</div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta" onclick="toggleFaq(this)">
+                <span>Cancelamento</span>
+                <span class="faq-seta"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-resposta-wrap" style="">
+                <div class="faq-resposta">
+                    <ul>
+                        <li>Em caso de não comparecimento ao tour por motivos de saúde, deverá ser apresentado um atestado médico chileno.</li>
+                        <li>Alterações com menos de 24h de antecedência estão sujeitas à cobrança de multa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>© 2024 <span>Vamo Viajar</span> — Tours no Chile para Brasileiros ✈️</p>
+    <p style="margin-top:8px">Feito com 🩷 para quem ama viajar</p>
+</footer>
+
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<a href="https://wa.me/message/P2THDXHXEB5WH1" class="wpp-float" target="_blank" id="wppFloat">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ===== LIGHTBOX DE FOTOS DE CLIENTES ===== -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="fecharLightboxFora(event)">
+    <button class="lightbox-fechar" onclick="fecharLightbox()"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxNavegar(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="lightboxImg" src="assets/img044.jpg" alt="Foto de cliente">
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNavegar(1)"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-contador" id="lightboxContador">1 de 1</div>
+</div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body></html>
